@@ -1,0 +1,6 @@
+@ResumeCraft_API_HostAddress = http://localhost:5294
+
+GET {{ResumeCraft_API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
