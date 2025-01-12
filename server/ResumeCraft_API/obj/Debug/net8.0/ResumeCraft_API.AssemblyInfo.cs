@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ResumeCraft_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12f65d843b977ba485be1cf690148e1c720a6133")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28ff164f4fae9654ab7dc39029795a2dcf5c0beb")]
 [assembly: System.Reflection.AssemblyProductAttribute("ResumeCraft_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ResumeCraft_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

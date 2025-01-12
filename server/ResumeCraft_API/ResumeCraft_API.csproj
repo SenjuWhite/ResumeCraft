@@ -10,4 +10,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ResumeCraft_API.DataAccess\ResumeCraft_API.DataAccess.csproj" />
+    <ProjectReference Include="..\ResumeCraft_API.Models\ResumeCraft_API.Models.csproj" />
+  </ItemGroup>
+
 </Project>

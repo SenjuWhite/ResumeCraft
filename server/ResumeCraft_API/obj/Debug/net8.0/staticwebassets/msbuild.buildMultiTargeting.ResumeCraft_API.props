@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ResumeCraft_API.props" />
+</Project>
