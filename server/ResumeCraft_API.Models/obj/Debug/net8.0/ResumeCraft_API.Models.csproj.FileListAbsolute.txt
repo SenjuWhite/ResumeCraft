@@ -1,0 +1,15 @@
+D:\projects\ResumeCraft\server\ResumeCraft_API.Models\bin\Debug\net8.0\ResumeCraft_API.Models.deps.json
+D:\projects\ResumeCraft\server\ResumeCraft_API.Models\bin\Debug\net8.0\ResumeCraft_API.Models.runtimeconfig.json
+D:\projects\ResumeCraft\server\ResumeCraft_API.Models\bin\Debug\net8.0\ResumeCraft_API.Models.dll
+D:\projects\ResumeCraft\server\ResumeCraft_API.Models\bin\Debug\net8.0\ResumeCraft_API.Models.pdb
+D:\projects\ResumeCraft\server\ResumeCraft_API.Models\obj\Debug\net8.0\ResumeCraft_API.Models.csproj.AssemblyReference.cache
+D:\projects\ResumeCraft\server\ResumeCraft_API.Models\obj\Debug\net8.0\ResumeCraft_API.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\ResumeCraft\server\ResumeCraft_API.Models\obj\Debug\net8.0\ResumeCraft_API.Models.AssemblyInfoInputs.cache
+D:\projects\ResumeCraft\server\ResumeCraft_API.Models\obj\Debug\net8.0\ResumeCraft_API.Models.AssemblyInfo.cs
+D:\projects\ResumeCraft\server\ResumeCraft_API.Models\obj\Debug\net8.0\ResumeCraft_API.Models.csproj.CoreCompileInputs.cache
+D:\projects\ResumeCraft\server\ResumeCraft_API.Models\obj\Debug\net8.0\ResumeCraft_API.Models.sourcelink.json
+D:\projects\ResumeCraft\server\ResumeCraft_API.Models\obj\Debug\net8.0\ResumeCraft_API.Models.dll
+D:\projects\ResumeCraft\server\ResumeCraft_API.Models\obj\Debug\net8.0\refint\ResumeCraft_API.Models.dll
+D:\projects\ResumeCraft\server\ResumeCraft_API.Models\obj\Debug\net8.0\ResumeCraft_API.Models.pdb
+D:\projects\ResumeCraft\server\ResumeCraft_API.Models\obj\Debug\net8.0\ResumeCraft_API.Models.genruntimeconfig.cache
+D:\projects\ResumeCraft\server\ResumeCraft_API.Models\obj\Debug\net8.0\ref\ResumeCraft_API.Models.dll
