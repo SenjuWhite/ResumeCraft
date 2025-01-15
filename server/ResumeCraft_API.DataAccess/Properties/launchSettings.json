@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ResumeCraft_API.DataAccess": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "connectionString": "Server=.;Initial Catalog=resume_craft;User ID=sa;Password=admin;TrustServerCertificate=True;"
+      }
+    }
+  }
+}
