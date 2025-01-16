@@ -14,6 +14,6 @@ namespace ResumeCraft_API.DataAccess.Repositories.IRepositories
         Task<T> GetValueAsync(Expression<Func<T, bool>> filter);
         Task AddAsync(T entity);
         Task DeleteAsync(T entity);
-        Task Update(T entity);
+        Task UpdateAsync(T entity);
     }
 }
