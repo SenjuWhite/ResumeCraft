@@ -20,6 +20,6 @@ namespace ResumeCraft_API.Models.Models
         public bool IsGoogleAuth { get; set; }
         public string? ResetPasswordToken { get; set; }
         public DateTime? ResetTokenExpiration { get; set; }
-        public ICollection<Resume> Resumes { get; set; }
+        public ICollection<Resume>? Resumes { get; set; }
     }
 }
