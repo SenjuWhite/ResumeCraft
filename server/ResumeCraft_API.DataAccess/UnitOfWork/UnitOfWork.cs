@@ -35,5 +35,9 @@ namespace ResumeCraft_API.DataAccess.UnitOfWork
             SocialLink = new SocialLinkRepository(_db);
             
         }
+        public async Task SaveAsync()
+        {
+            await _db.SaveChangesAsync();
+        }
     }
 }

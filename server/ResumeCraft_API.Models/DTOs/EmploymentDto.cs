@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ResumeCraft_API.Models.Models
+namespace ResumeCraft_API.Models.DTOs
 {
-    public class Employment
+    public class EmploymentDto
     {
-        public int Id { get; set; }
         public int ResumeId { get; set; }
         public string? Company { get; set; }
         public string? Position { get; set; }
@@ -17,8 +15,5 @@ namespace ResumeCraft_API.Models.Models
         public DateTime? EndDate { get; set; }
         public string? City { get; set; }
         public string? Description { get; set; }
-
-        public Resume Resume { get; set; }
     }
 }
-

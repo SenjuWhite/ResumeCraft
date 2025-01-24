@@ -24,7 +24,14 @@ namespace ResumeCraft_API.DataAccess
         public DbSet<Skill> Skills { get; set; }
         public DbSet<SocialLink> SocialLinks { get; set; }
 
-
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Resume>()
+                .HasMany(r => r.Employments)
+                .WithOne(e => e.Resume)
+                .HasForeignKey(e => e.ResumeId)
+                .OnDelete(DeleteBehavior.Cascade);
+        }
 
     }
 }

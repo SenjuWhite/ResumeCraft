@@ -1,18 +1,18 @@
-﻿using System;
+﻿using ResumeCraft_API.Models.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ResumeCraft_API.Models.Models
+namespace ResumeCraft_API.Models.DTOs
 {
-    public class Resume
+    public class ResumeDto
     {
-        public int Id { get; set; }
         public int UserId { get; set; }
+        public string Name { get; set; }
         public int TemplateId { get; set; }
-        public string? Name { get; set; }
         public int? Age { get; set; }
         public string? Position { get; set; }
         public string? FirstName { get; set; }
@@ -24,17 +24,13 @@ namespace ResumeCraft_API.Models.Models
         public string? Address { get; set; }
         public int? ZipCode { get; set; }
         public string? Summary { get; set; }
-        [Required]
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
-        public DateTime UpdatedAt { get; set; } = DateTime.Now;
         //public User User { get; set; }
-        public Template Template { get; set; }
-        public ICollection<Employment> Employments { get; set; }
-        public ICollection<Skill> Skills { get; set; }
-        public ICollection<Education> Educations { get; set; }
+        public ICollection<EmploymentDto>? Employments { get; set; }
+        public ICollection<SkillDto>? Skills { get; set; }
+        public ICollection<EducationDto>? Educations { get; set; }
 
-        public ICollection<Language> Languages { get; set; }
-        public ICollection<SocialLink> SocialLinks { get; set; }
-        public ICollection<CustomSection> CustomSections { get; set; }
+        public ICollection<LanguageDto>? Languages { get; set; }
+        public ICollection<SocialLinkDto>? SocialLinks { get; set; }
+        public ICollection<CustomSectionDto>? CustomSections { get; set; }
     }
 }
