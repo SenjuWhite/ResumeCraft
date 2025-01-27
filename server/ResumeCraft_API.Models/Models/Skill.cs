@@ -4,10 +4,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ResumeCraft_API.Models.Interfaces;
 
 namespace ResumeCraft_API.Models.Models
 {
-    public class Skill
+    public class Skill : IIdentifiable<int>
     {
         public int Id { get; set; }
         [Required]

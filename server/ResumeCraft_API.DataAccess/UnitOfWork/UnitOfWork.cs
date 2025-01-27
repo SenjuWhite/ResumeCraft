@@ -12,6 +12,7 @@ namespace ResumeCraft_API.DataAccess.UnitOfWork
     public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _db;
+        private readonly Dictionary<Type, object> _repositories;
         public ICustomSectionRepository CustomSection { get; private set; }
         public IEducationRepository Education { get; private set; }
         public IEmploymentRepository Employment { get; private set; }
@@ -23,6 +24,7 @@ namespace ResumeCraft_API.DataAccess.UnitOfWork
         public ITemplateRepository Template { get; private set; }
         public UnitOfWork(ApplicationDbContext db)
         {
+            _repositories = new Dictionary<Type, object>();
             _db = db;
             CustomSection = new CustomSectionRepository(_db);
             Education = new EducationRepository(_db);
@@ -34,6 +36,18 @@ namespace ResumeCraft_API.DataAccess.UnitOfWork
             Template = new TemplateRepository(_db);
             SocialLink = new SocialLinkRepository(_db);
             
+        }
+        public IRepository<T> Repository<T>() where T : class
+        {
+            var type = typeof(T);
+
+            if (!_repositories.ContainsKey(type))
+            {
+                var repositoryInstance = new Repository<T>(_db);
+                _repositories.Add(type, repositoryInstance);
+            }
+
+            return (IRepository<T>)_repositories[type];
         }
         public async Task SaveAsync()
         {

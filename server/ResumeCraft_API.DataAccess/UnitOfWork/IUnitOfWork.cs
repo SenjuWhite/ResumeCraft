@@ -18,6 +18,7 @@ namespace ResumeCraft_API.DataAccess.UnitOfWork
         ISkillRepository Skill { get; }
         ISocialLinkRepository SocialLink{ get; }
         ITemplateRepository Template { get; }
+        IRepository<T> Repository<T>() where T : class;
         Task SaveAsync();
 
     }

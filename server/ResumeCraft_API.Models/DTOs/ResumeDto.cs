@@ -1,4 +1,5 @@
-﻿using ResumeCraft_API.Models.Models;
+﻿using ResumeCraft_API.Models.Interfaces;
+using ResumeCraft_API.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -8,10 +9,11 @@ using System.Threading.Tasks;
 
 namespace ResumeCraft_API.Models.DTOs
 {
-    public class ResumeDto
+    public class ResumeDto : IIdentifiable<int?>
     {
+        public int? Id { get; set; }
         public int UserId { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public int TemplateId { get; set; }
         public int? Age { get; set; }
         public string? Position { get; set; }
@@ -25,12 +27,12 @@ namespace ResumeCraft_API.Models.DTOs
         public int? ZipCode { get; set; }
         public string? Summary { get; set; }
         //public User User { get; set; }
-        public ICollection<EmploymentDto>? Employments { get; set; }
-        public ICollection<SkillDto>? Skills { get; set; }
-        public ICollection<EducationDto>? Educations { get; set; }
+        //public ICollection<EmploymentDto>? Employments { get; set; }
+        //public ICollection<SkillDto>? Skills { get; set; }
+        //public ICollection<EducationDto>? Educations { get; set; }
 
-        public ICollection<LanguageDto>? Languages { get; set; }
-        public ICollection<SocialLinkDto>? SocialLinks { get; set; }
-        public ICollection<CustomSectionDto>? CustomSections { get; set; }
+        //public ICollection<LanguageDto>? Languages { get; set; }
+        //public ICollection<SocialLinkDto>? SocialLinks { get; set; }
+        //public ICollection<CustomSectionDto>? CustomSections { get; set; }
     }
 }

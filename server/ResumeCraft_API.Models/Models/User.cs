@@ -5,10 +5,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ResumeCraft_API.Models.Interfaces;
 
 namespace ResumeCraft_API.Models.Models
 {
-    public class User
+    public class User : IIdentifiable<int>
     {
         [Key]
         public int Id { get; set; } 

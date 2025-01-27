@@ -4,10 +4,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ResumeCraft_API.Models.Interfaces;
 
 namespace ResumeCraft_API.Models.Models
 {
-    public class Employment
+    public class Employment : IIdentifiable<int>
     {
         public int Id { get; set; }
         public int ResumeId { get; set; }

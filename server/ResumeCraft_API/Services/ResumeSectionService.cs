@@ -1,13 +1,16 @@
 ﻿using AutoMapper;
+using Microsoft.VisualBasic;
 using ResumeCraft_API.DataAccess.Repositories.IRepositories;
 using ResumeCraft_API.DataAccess.UnitOfWork;
 using ResumeCraft_API.Models.DTOs;
+using ResumeCraft_API.Models.Interfaces;
 using ResumeCraft_API.Models.Models;
 using ResumeCraft_API.Services.IServices;
+using System;
 
 namespace ResumeCraft_API.Services
 {
-    public class ResumeSectionService<T> : IResumeSectionService<T> where T : class
+    public class ResumeSectionService : IResumeSectionService
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
@@ -17,7 +20,7 @@ namespace ResumeCraft_API.Services
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
-        public async Task AddAsync(T item)
+        public async Task AddAsync<T>(T item) // переробити прибрати свіч/кейс
         {
             switch (item)
             {
@@ -48,14 +51,19 @@ namespace ResumeCraft_API.Services
             }
             await _unitOfWork.SaveAsync();                
         }
-        public Task DeleteAsync(int itemId)
+        public async Task DeleteAsync<T>(int itemId)
+
         {
             throw new NotImplementedException();
         }
-
-        public Task UpdateAsync(T item)
+        public async Task UpdateAsync<T, TDto>(ICollection<T> existingEntities, List<TDto> newEntitiesDto)
+            where T : IIdentifiable<int>
+            where TDto : IIdentifiable<int?>
         {
-            throw new NotImplementedException();
+            var newIds = newEntitiesDto.Where(dto => dto.Id != null).Select(dto => dto.Id);
+            var entitiesToRemove = existingEntities.Where(e => !newIds.Contains(e.Id)).ToList();
+
         }
     }
+ 
 }
